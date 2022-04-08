@@ -37,10 +37,23 @@ function Calculate(yPrime, stepSize, startX, startY, endX){
         console.log(Number(x[i]).toFixed(2) + ", " + Number(y[i]).toFixed(2));
     }
 }
-document.querySelector('button').addEventListener('click', Calculate(
-    document.getElementById('yPrime').value,
-    document.getElementById('stepSize').value,
-    document.getElementById('startX').value,
-    document.getElementById('startY').value,
-    document.getElementById('endX').value)
-);
+
+document.getElementById('calculateButton').onclick = function(){
+    Calculate(
+            document.getElementById('yPrime').value,
+            document.getElementById('stepSize').value,
+            document.getElementById('startX').value,
+            document.getElementById('startY').value,
+            document.getElementById('endX').value
+            )
+};
+
+
+// document.getElementById('calculateButton').addEventListener('click', Calculate(
+//     document.getElementById('yPrime').value,
+//     document.getElementById('stepSize').value,
+//     document.getElementById('startX').value,
+//     document.getElementById('startY').value,
+//     document.getElementById('endX').value
+//     )
+// );
