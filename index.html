@@ -1,33 +1,32 @@
 <!doctype html>
 <html lang="en">
-<script src="./node_modules/fparser/dist/fparser.js"></script>
-<script src="euler.js" type="module"></script>
+  <script src="./node_modules/fparser/dist/fparser.js"></script>
+  <script src="euler.js" type="module"></script>
 
-<head>
-  <meta charset="utf-8">
-  <title>Euler Method Calculator</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Euler Method Calculator</title>
+  </head>
 
-<body>
-  <h1>Euler Method Calculator:</h1>
-  <div class="Input">
-    <label for="yPrime">y':</label>
-    <input type="text" id="yPrime" name="yPrime" value="x*sqrt(y)" placeholder="f(x,y)"><br><br>
+  <body>
+    <h1>Euler Method Calculator:</h1>
+    <div class="Input">
+      <label for="yPrime">y':</label>
+      <input type="text" id="yPrime" name="yPrime" value="x*sqrt(y)" placeholder="f(x,y)"><br><br>
 
-    <label for="stepSize">h:</label>
-    <input type="number" id="stepSize" name="stepSize" placeholder="step size" value="0.1" step="0.1" min="0"><br><br>
+      <label for="stepSize">h:</label>
+      <input type="number" id="stepSize" name="stepSize" placeholder="step size" value="0.1" step="0.1" min="0"><br><br>
 
-    <label for="startX">x0:</label>
-    <input type="number" id="startX" name="startX" value="1" step="0.1"><br><br>
+      <label for="startX">x0:</label>
+      <input type="number" id="startX" name="startX" value="1" step="0.1"><br><br>
 
-    <label for="startY">y0:</label>
-    <input type="number" id="startY" name="startY" value="4" step="0.1"><br><br>
+      <label for="startY">y0:</label>
+      <input type="number" id="startY" name="startY" value="4" step="0.1"><br><br>
 
-    <label for="endX">x1:</label>
-    <input type="number" id="endX" name="endX" value="1.5" step="0.1"><br><br>
+      <label for="endX">x1:</label>
+      <input type="number" id="endX" name="endX" value="1.5" step="0.1"><br><br>
 
-    <button id="calculateButton" name="calculate">Calculate!</button>
-  </div>
-</body>
-
+      <button id="calculateButton" name="calculate">Calculate!</button>
+    </div>
+  </body>
 </html>
