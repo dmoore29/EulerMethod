@@ -12,17 +12,11 @@ function Calculate(yPrime, stepSize, startX, startY, endX){
     y0 = Number(startY);
     
     let n = (x1-x0)/h;
-    console.log(n);
     const x = [];
     const y = [];
 
     x[0] = x0;
     y[0] = y0;
-
-    const fObj = new Formula('x+sqrt(y)');
-    let result = fObj.evaluate({x: 3, y: 4}); // result = 8
-
-    console.log(result);
 
     for(let i = 1; i <= n; i++){
         x[i] = new Number(Number(x[i-1]) + Number(h)).toFixed(2);
@@ -47,13 +41,3 @@ document.getElementById('calculateButton').onclick = function(){
             document.getElementById('endX').value
             )
 };
-
-
-// document.getElementById('calculateButton').addEventListener('click', Calculate(
-//     document.getElementById('yPrime').value,
-//     document.getElementById('stepSize').value,
-//     document.getElementById('startX').value,
-//     document.getElementById('startY').value,
-//     document.getElementById('endX').value
-//     )
-// );
