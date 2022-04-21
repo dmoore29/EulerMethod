@@ -26,10 +26,29 @@ function Calculate(yPrime, stepSize, startX, startY, endX){
         y[i] = Number(y[i-1]) + Number(h) * Number(result);
     }
 
-    // Print results
+    // Clear existing elements
+    let tableContent = document.getElementById("OutputTable").getElementsByTagName('td');
+    Array.from(tableContent).forEach(function (element) {
+        element.remove();
+    });
+
+    // Display results
+    let tableElement = document.getElementById("OutputTable");
+
     for(let i = 0; i <= n; i++){
         console.log(Number(x[i]).toFixed(2) + ", " + Number(y[i]).toFixed(2));
+        let row = tableElement.insertRow(i+1);
+        row.style.class="row";
+        let xCell = row.insertCell(0);
+        let yCell = row.insertCell(1);
+
+        xCell.innerHTML = Number(x[i]).toFixed(2);
+        xCell.style.class = "cell";
+        yCell.innerHTML = Number(y[i]).toFixed(2);
+        yCell.style.class = "cell";
     }
+    
+    document.getElementById("OutputTable").style.display = "";
 }
 
 // Button click handler
